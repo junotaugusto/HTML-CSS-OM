@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 - Style e atributos ID e Class</title>
+    <style>
+
+        body{
+            background-color: lightgrey;
+            font-family: Arial;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        p{
+            text-align: justify;
+        }
+
+        h1#fundoverde{
+            background-color: green;
+            padding: 12px;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            max-width: 40vw;
+            box-shadow: 1px 1px 10px white;
+        }
+
+        h1.responsivo{
+            min-width: 30vw;
+            font-size: .5em;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="fundoverde" class="responsivo">Style e atributos ID e Class</h1>
+    <h2>Observações sobre IDs e Classes</h2>
+    <p>Em HTML existem tags que possuem atributos que tem algum valor, ou atributos que não possuem valor nenhum. Nesses casos, o navegador insere um valor booleano a eles.</p>
+    <p>Os atributos mais "famosos" são o <em>ID</em> e <em>CLASS</em>.</p>
+    <p>O ID serve como um identificador da tag e eles possuem um valor, sempre entre aspas.</p>
+    <p>O identificador é único na página. Não podemos ter outra tag html com o mesmo identificador.</p>
+    <p>Ja as classes podem ter mais de uma.</p>
+    <p>Basicamente esplicou como selecionar determinadas tags do html usando a tag &lt;style&gt; dentro do cabeçalho.</p>
+    <p>Ele aplica as especificidades aos seletores que estiverem por último.</p>
+</body>
+</html>
