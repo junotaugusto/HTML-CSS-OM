@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5 - Tags Importantes e Semântica em Textos</title>
+    <style>
+
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        p{
+            text-align: justify;
+        }
+        img{
+            display: block;
+            margin: auto;
+        }
+        a{
+            display: block;
+            margin: auto;
+            width: 51%;
+        }
+        h2{
+            font-style: italic;
+        }
+        h2:hover{
+            background-color: white;
+            color: black;
+            transition: 3s;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tags Importantes e Semântica em Textos</h1>
+    <h2>Tags inline</h2>
+    <p>Algumas tags, geralmente, contém outras tags. Isso se afirma quando a tag é um bloco. Ao inspecionar um documento, verifique na aba computed qual o display da tag. A característica de um bloco é que normalmente ele pega a largura inteira de um elemento e quebra uma linha. 
+    </p>
+    <p>Geralmente, dentro de um parágrafo, não podemos inserir nenhuma tag com display block. Apenas aceitando tags inline, como é o caso de &lt;span&gt;, &lt;strong&gt;, lembrando que a tag &lt;strong&gt; é semântica, ou seja, ela possui um significado, diferentemente de &lt;b&gt;, que apenas deixa o texto em negrito.</p>
+    <p>Com imagens, mesma coisa. Podemos inclusive colocar uma imagem dentro de um link, ou seja, a tag &lt;a&gt; aceita a tag &lt;img&gt; dentro dela conforme vemos na imagem abaixo.</p>
+    <a href="https://developer.mozilla.org/en-US/" target="_blank"><img src="imagens/png-clipart-mozilla-foundation-mozilla-public-license-firefox-web-browser-foundation-logo-mdn-web-docs.png" alt="Logo da MDN" title="Link para o site da MDN"></a>
+    <p>No caso, o atributo alt refere-se ao texto alternativo da imagem, caso a imagem quebre no meio do caminho. Já o atributo title dá uma descrição para a imagem. Ao passar o mouse por cima, o usuário poderá ler a mensagem atribuída à imagem.</p>
+    <p>Imagens são elementos inline, o que quer dizer que caberia dentro de um parágrafo, por exemplo. Para deixá-las no centro da tela e quebrando a linha, por exemplo, é preciso transformá-las em bloco. Por isso, no CSS, adicione ao seletor o display: block e a margin: auto. Como os elementos em bloco ocupam toda a largura do html, ele irá centralizar a imagem, diferentemente dos elementos inline que ocupam apenas o próprio espaço. </p>
+    <p>Mesma coisa com a tag &lt;a&gt;.</p>
+    <p>Falou um pouco sobre del e ins que riscam ou sublinham os textos.</p>
+    <h2>Tags em bloco</h2>
+    <p>As tags blockquote, code, hr entre outras são em bloco. </p>
+    <p>As tags SPAN e DIV são containeres genéricos.</p>
+    <p>O elemento HTML &lt;span&gt; é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos class ou id ), ou para compartilhar valores de atributos como lang. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. &lt;span&gt; é muito parecido com o elemento &lt;div&gt; , entretando &lt;div&gt; é um elemento de nível de bloco enquanto &lt;span&gt; é um elemento em linha.</p>
+
+</body>
+</html>
