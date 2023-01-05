@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 - Semântica em Elementos HTML5</title>
+    <style>
+
+        body{
+            background-color: black;
+            color: white;
+            font-family: Arial;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        p{
+            text-align: justify;
+        }
+
+        h1#fundoverde{
+            background-color: green;
+            padding: 12px;
+            margin: auto;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            max-width: 97vw;
+            box-shadow: 1px 1px 10px white;
+        }
+        
+        h1.responsivo{
+            min-width: 30vw;
+            font-size: 5vw;
+        }
+        h2.responsivo{
+            font-size: 2.5vw; /*Tamanho original da fonte em h2*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Semântica em Elementos HTML5</h1>
+    <h2>A importância da semântica para o HTML:</h2>
+    <p>
+        A semântica HTML ajuda aos sistemas de busca como o google a entenderem os principais assuntos de cada página e assim retornarem resultados de busca mais adequados e precisos. Mas uma boa semântica vai muito além, ela é fundamental para o entendimento dos conteúdos para pessoas que usam softwares leitores de tela, ou seja, deficientes visuais
+    </p>
+    <p>
+        Elementos de separação de conteúdo permitem organizar o conteúdo do documento em partes lógicas. Use elementos de separação para criar um esboço do conteúdo da página, incluindo navegação por cabeçalho e rodapé, e elementos de cabeçalho para identificar seções de conteúdo.
+    </p>
+    <p>
+        Antes do HTML 5 os sites eram criados dentro de divs e spans, até mesmo tabelas, que serviam para estruturar o site, totalmente fora de semântica.
+    </p>
+    <p>Era separado mais ou menos dessa forma: <br><br>
+        <code>
+            &lt;div id="header"&gt;<br>
+            &lt;div id="menu"&gt;<br>
+            &lt;div id="content"&gt;<br>
+        </code><br>
+    </p>
+    <p>
+        Ou seja, o conteúdo era dividido apenas em divs e spans, sem semântica alguma.
+    </p>
+    <p>Clique <a href="exemplo.html">aqui</a>para ver o site semântico criado em aula.</p>
+    
+</body>
+</html>
