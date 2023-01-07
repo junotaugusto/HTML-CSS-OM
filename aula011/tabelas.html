@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 - Tabelas</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            border-collapse: collapse;/*Une as bordas da tabela*/
+            width: 50%;
+        }
+        table td, table th{
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        table caption{
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            font-size: 14px;
+            margin: 8px 0px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <table> <!--Cria a tabela-->
+        <caption>Tabela Aula 11</caption><!--Um pequeno título-->
+        <thead> <!--Cria o cabeçalho da tabela-->
+            <tr> <!--Cria a LINHA de cabeçalho-->
+                <th>Título 1</th> <!-- É th Porque está dentro do header-->
+                <th>Título 2</th>
+                <th>Título 3</th>
+            </tr>
+        </thead>
+        <tbody> <!--Cria o corpo da tabela-->
+            <tr><!--Também recebe uma linha-->
+                <td>Conteúdo 1</td><!--Dados do corpo da tabela-->
+                <td>Conteúdo 2</td>
+                <td>Conteúdo 3</td>
+            </tr>
+            <tr>
+                <td>Conteúdo 4</td>
+                <td>Conteúdo 5</td>
+                <td>Conteúdo 6</td>
+            </tr>
+            <tr>
+                <td>Conteúdo 7</td>
+                <td>Conteúdo 8</td>
+                <td>Conteúdo 9</td>
+            </tr>
+            <tr>
+                <td>Conteúdo 10</td>
+                <td>Conteúdo 11</td>
+                <td>Conteúdo 12</td>
+            </tr>
+            <tr>
+                <td>Conteúdo 13</td>
+                <td>Conteúdo 14</td>
+                <td>Conteúdo 15</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

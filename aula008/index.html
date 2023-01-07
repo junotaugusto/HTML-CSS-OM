@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 8 - Aprenda a Pensar em HTML</title>
+    <style>
+     body{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+        padding: 10px;
+     }
+     p{
+        text-align: justify;
+     }
+    
+     
+    </style>
+</head>
+<body>
+    <h1>Aprenda a Pensar em HTML</h1>
+    <p>As divs abaixo encontram-se umas dentro das outras, com tamanhos diferentes.</p>
+    <div style="width: 180px; height: 180px; background-color: red;">
+        
+        <div style="width: 60px; height: 60px; background-color: yellow; float: left;"></div>
+        <div style="width: 60px; height: 60px; background-color: blue; float: left;"></div>
+        <div style="width: 60px; height: 60px; background-color: brown; float: left;"></div>
+        <div style="width: 120px; height: 60px; background-color: purple; float: left;"></div>
+        <div style="width: 60px; height: 60px; background-color: green; float: left;"></div> 
+        <div style="width: 60px; height: 60px; background-color: white; float: left;"></div>
+    </div>
+
+    <p>Como não foi especificado o posicionamento das caixas, elas ficaram uma em cima da outra, saindo da div principal. Pelo fato de se tratarem de elementos em bloco, elas quebram a linha. Uma forma de "resolver" isso seria inserir o display float left, como foi feito e se encontra a imagem agora. </p>
+    <p>Este é um método mais antigo. Atualmente temos o flex ou ridge que veremos mais à frente no curso. O princípio é entender que um site é estruturado com caixas dentro de caixas dentro de caixas... </p>
+
+</body>
+</html>

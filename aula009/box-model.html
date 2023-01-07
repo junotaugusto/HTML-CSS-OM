@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 9 - Box Model</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+        body{
+           background-color: black;
+           color: white;
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 1.5em;
+           padding: 10px;
+        }
+        p{
+           text-align: justify;
+        }
+        .section-one{
+            font-size: 16px;
+            width: 300px;
+            height: 200px;
+            padding: 30px;
+            margin: 20px;
+            border: 4px solid grey;
+            background-image: url("https://cdn.wallpapersafari.com/98/5/3F8r1P.jpg");
+            background-size: cover;
+            background-position: center center;
+        }
+        .section-two{
+            background: cyan;
+            color: black;
+            font-size: 16px;
+            width: 300px;
+            height: 150px;
+            padding: 15px;
+            margin: 20px;
+            border-style: solid;
+            border-width: 15px;
+            border-top-color: grey;
+            border-bottom-color: green;
+        }
+        .section-one, 
+        .section-two{
+            box-sizing: border-box;
+        }
+       </style>
+</head>
+<body>
+    <header>
+        <h1>Box Model</h1>
+    </header>
+    <section>
+        <h2>Sobre Box Model...</h2>
+        <p>
+            Em uma página WEB, cada elemento é representado como um box retangular. Determinar o tamanho, propriedades - como sua cor, fundo, estilo das bordas - e a posição desses boxes é o objetivo do mecanismo de renderização.
+        </p>
+        <p>
+            No CSS, cada um desses boxes retangulares é descrita usando o box model padrão. Este modelo descreve o conteúdo do espaço ocupado por um elemento. Cada box possui 4 edges: <strong>margin edge</strong>, <strong>border edge</strong>, <strong>padding edge</strong> e <strong>content edge</strong>.
+        </p>
+        <p>
+            Por padrão, nós não temos uma definição de largura ou de altura dos elementos em caixa. Ou seja, ao criar uma section por exemplo, ou uma div, quem configura por padrão esses elementos é o navegador. Ele irá ocupar o que tiver de tela porque é um bloco. 
+        </p>
+        <p>
+            <ul>
+                <li>
+                    Content Edge - É a parte de dentro da caixa
+                </li>
+                <li>
+                    Padding edge - É o preenchimento. 
+                </li>
+                <li>
+                    Border edge - É a borda. 
+                </li>
+                <li>
+                    Margin edge - É a Margem.
+                </li>
+            </ul>
+        </p>
+        <p>Sobre a margem, elas não acumulam. Se você tem duas caixas, uma em cima da outra, a margem bottom da de cima não irá acumular com a margem top da de baixo. Irá prevalescer a margem maior. Se for a mesma margem pra ambos, este será o valor que ficará.</p>
+        <p>As propriedades width (largura) e height (altura) são medidas incluindo só o conteúdo, mas não o padding, border ou margin. Nota: Padding, border e margin serão fora da box. Exemplo: Se a box tiver a width de 350px e, se você aplicar uma propriedade border: 10px solid black; o resultado renderizado no navegador (browser) será a width de 370px, porque ele irá contar os 10px dos lados direito e esquerdo da caixa, somando 10 a mais em cada.</p>
+        <p>As propriedades de largura (width) e de altura (height) incluem o tamanho padding size e a propriedade border, mas não incluem a propriedade margin.</p>
+        <p>Ao utilizar o {box-sizing: borderbox}, as bordas e o padding serão usados no cálculo definido da largura e altura do elemento.</p>
+        <p>Ou seja, agora, se adicionarmos padding, ao invés do padding aumentar o tamanho da caixa com seu preenchimento, ele irá apenas diminuir o tamanho do conteúdo dentro da caixa até "estourar".</p>
+        <p>A ideia é saber o tamanho exato que o elemento irá ter na tela. </p>
+    </section>
+    <hr><hr><hr>
+    <section class="section-one">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo distinctio rerum omnis voluptatum amet assumenda, commodi, natus eligendi optio sint et cupiditate adipisci officiis accusamus ut saepe autem odit minima!
+    </section>
+    <section class="section-two">2</section>
+</body>
+</html>

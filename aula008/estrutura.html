@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura do site</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        main{
+            height: 100vh;
+        }
+        div.icones{
+            background-color: rgb(47, 47, 193);
+            width: 90%;
+            height: 70px;
+            margin: auto;
+        }
+        div.icone-esquerda{
+            background-color: red;
+            height: 35px;
+            width: 150px;
+            float: left;
+            margin: 10px;
+            border-radius: 5px;
+            margin-top: 17px;
+        }
+        div.icone-direita{
+            background-color: red;
+            height: 35px;
+            width: 150px;
+            float: right;
+            margin: 10px;
+            border-radius: 5px;
+            margin-top: 17px;
+        }
+        div#principal {
+            background-color: white;
+            height: 95vh;
+            width: 89vw;
+            margin: auto;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.acesso{
+            background-color: purple;
+            height: 50%;
+            width: 50%;
+            margin: auto;
+            margin-top: 10px;
+            position: absolute;
+        }
+        div.formulario{
+            width: 450px;
+            height: 80px;
+            background-color: white;
+            margin: auto;
+            margin-top: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="icones">
+            <div class="icone-esquerda"></div>
+            <div class="icone-direita"></div>
+        </div>
+    </header>
+    <main>
+        <div id="principal">
+            <div class="acesso">
+                <div class="formulario"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
