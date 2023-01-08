@@ -12,59 +12,70 @@
         table{
             border-collapse: collapse;/*Une as bordas da tabela*/
             width: 50%;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.337);
         }
         table td, table th{
             border: 1px solid #ccc;
             padding: 5px;
+            text-align: left;
         }
 
         table caption{
-            caption-side: bottom;
+            caption-side: top;
             text-align: left;
             font-style: italic;
             font-size: 14px;
             margin: 8px 0px;
+            text-align: center;
+        }
+        .responsive-table{
+            max-width: 100%;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <table> <!--Cria a tabela-->
-        <caption>Tabela Aula 11</caption><!--Um pequeno título-->
-        <thead> <!--Cria o cabeçalho da tabela-->
-            <tr> <!--Cria a LINHA de cabeçalho-->
-                <th>Título 1</th> <!-- É th Porque está dentro do header-->
-                <th>Título 2</th>
-                <th>Título 3</th>
-            </tr>
-        </thead>
-        <tbody> <!--Cria o corpo da tabela-->
-            <tr><!--Também recebe uma linha-->
-                <td>Conteúdo 1</td><!--Dados do corpo da tabela-->
-                <td>Conteúdo 2</td>
-                <td>Conteúdo 3</td>
-            </tr>
-            <tr>
-                <td>Conteúdo 4</td>
-                <td>Conteúdo 5</td>
-                <td>Conteúdo 6</td>
-            </tr>
-            <tr>
-                <td>Conteúdo 7</td>
-                <td>Conteúdo 8</td>
-                <td>Conteúdo 9</td>
-            </tr>
-            <tr>
-                <td>Conteúdo 10</td>
-                <td>Conteúdo 11</td>
-                <td>Conteúdo 12</td>
-            </tr>
-            <tr>
-                <td>Conteúdo 13</td>
-                <td>Conteúdo 14</td>
-                <td>Conteúdo 15</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="responsive-table">
+        <table> <!--Cria a tabela-->
+            <caption>Tabela Aula 11</caption><!--Um pequeno título-->
+            <thead> <!--Cria o cabeçalho da tabela-->
+                <tr> <!--Cria a LINHA de cabeçalho-->
+                    <th>Título 1</th> <!-- É th Porque está dentro do header-->
+                    <th>Título 2</th>
+                    <th>Título 3</th>
+                </tr>
+            </thead>
+            <tbody> <!--Cria o corpo da tabela-->
+                <tr><!--Também recebe uma linha-->
+                    <td rowspan="2" style="background-color: lightgrey;">Conteúdo 1</td><!--Dados do corpo da tabela-->
+                    <td colspan="2" style="text-align: center; background-color:indigo; color:white">Conteúdo 2</td>
+                </tr>
+                <tr>
+                    <td style="background-color: brown; color:yellowgreen">Conteúdo 3</td>
+                    <td rowspan="2" style="background-color: green;">Conteúdo 4</td>
+                </tr>
+                <tr>
+                    <td style="background-color:lightblue;" rowspan="3">Conteúdo 5</td>
+                    <td rowspan="2" style="background-color: red; color: black">Conteúdo 6</td>
+                </tr>
+                <tr>
+                    <td rowspan="2" style="background-color: deeppink; color:darksalmon">Conteúdo 7</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Conteúdo 8</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: center; background-color: greenyellow; color:rgb(18, 39, 39)">Rodapé 1, 2 e 3 usando colspan</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
 </body>
+<script src="script.js"></script>
 </html>
