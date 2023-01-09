@@ -29,7 +29,7 @@
     <p>O type indica para o navegador qual o tipo do input. </p>
     <p>O placeholder seria o texto de exemplo.</p>
     <p>Mais importante, é o value. Value significa o valor do input. Então TODOS os inputs possuem algum tipo de valor. Esse valor é o que vai chegar junto com name no servidor. No caso abaixo, o value não aparece no input de nome porque o valor dele já é o que o usuário irá digitar. Já no input da checkbox, ele aparece como sim, para verificar se é ou não um dev. Neste caso, como não da para digitar nada, o valor que irá aparecer no backend é o valor em value, que no caso é "sim".</p>
-    <p>O label é o rótulo do formulário. É um elemento em linha, porém ele pode ser transformado em bloco pra quebrar a linha. Além disso, ao clicar nele, ele já seleciona o input que estiver dentro dele ou que estiver baseado no id do input. Por isso o atributo for, dentro do label.  </p>
+    <p>O label é o rótulo do formulário. É um elemento em linha, porém ele pode ser transformado em bloco pra quebrar a linha. Além disso, ao clicar nele, ele já seleciona o input que estiver dentro dele ou que estiver baseado no id do input. Por isso o atributo for, dentro do label. Quando o input for radio, o name tem que ser o mesmo para todos os objetos que poderão ser selecionados. No caso abaixo, o name é experiencia.  </p>
     <h2>Os tipos de botão</h2>
     <p>Existem três tipos de botão: botão normal, e os dois dentro do form o reset e o submit. Reset serve para resetar o input e voltar o value dele ao valor padrão. Já o submit, envia o formulário.</p>
     <p></p>
@@ -45,7 +45,7 @@
             <input type="checkbox" name="dev" id="dev" value="sim">
         </p>
         <p>
-            <label for="experiencia">Tem experiência?</label>
+            <label for="experiencia-sim">Tem experiência?</label>
             <input type="radio" name="experiencia" id="experiencia-sim" value="possui esperiência">sim
             <input type="radio" name="experiencia" id="experiencia-nao" value="não possui experiência">não
         </p>
