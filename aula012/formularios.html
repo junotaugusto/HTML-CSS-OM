@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 12 - FORMULÁRIOS</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulários e Campos</h1>
+    <p>Formulários são campos onde o usuário irá inserir dados que serão enviados ao back end.</p>
+    <p>É estritamente proíbido aninhar um formulário dentro de outro formulário. Isto pode fazer com que os formulários se comportem de maneira imprevisível baseada no navegador que está sendo utilizado.</p>
+    <p>Abaixo, alguns links para verificação:</p>
+    <ul>
+        <li>Para verificar os tipos de input dos formulários, clique <a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank" title="Site da W3Schools">aqui</a>.</li>
+        <li>Para verificar a semântica do html em formulários, clique <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form" target="_blank" title="Como estruturar seu formulário">aqui</a>.</li>
+    </ul>
+    <h2>Os tipos de input:</h2>
+    <p>Os formulários recebem vários tipos de inputs diferentes. Eles irão se comportar diferentemente conforme os tipos inseridos neles. Se você precisa, por exemplo, do nome de uma pessoa, utilize o type text. O name é mais utilizado no back end. O id e o name também servem como seletores.</p>
+    <p>O type indica para o navegador qual o tipo do input. </p>
+    <p>O placeholder seria o texto de exemplo.</p>
+    <p>Mais importante, é o value. Value significa o valor do input. Então TODOS os inputs possuem algum tipo de valor. Esse valor é o que vai chegar junto com name no servidor. No caso abaixo, o value não aparece no input de nome porque o valor dele já é o que o usuário irá digitar. Já no input da checkbox, ele aparece como sim, para verificar se é ou não um dev. Neste caso, como não da para digitar nada, o valor que irá aparecer no backend é o valor em value, que no caso é "sim".</p>
+    <p>O label é o rótulo do formulário. É um elemento em linha, porém ele pode ser transformado em bloco pra quebrar a linha. Além disso, ao clicar nele, ele já seleciona o input que estiver dentro dele ou que estiver baseado no id do input. Por isso o atributo for, dentro do label.  </p>
+    <h2>Os tipos de botão</h2>
+    <p>Existem três tipos de botão: botão normal, e os dois dentro do form o reset e o submit. Reset serve para resetar o input e voltar o value dele ao valor padrão. Já o submit, envia o formulário.</p>
+    <p></p>
+    <hr><hr><hr>
+        <form action="#" method="get" target="_blank" autocomplete="off"> <!--Form também é um bloco. O action é referente a para onde o desenvolvedor irá mandar o formulário. O metodo é atrelado à URL do site. O target envia o formulário para outra página. Autocomplete off para evitar que ele fique dizendo coisas que já foram inseridas anteriormente no formulário.-->
+        <p>O meu formulário</p>
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        </p>
+        <p>
+            <label for="dev">Sou um DEV:</label>
+            <input type="checkbox" name="dev" id="dev" value="sim">
+        </p>
+        <p>
+            <label for="experiencia">Tem experiência?</label>
+            <input type="radio" name="experiencia" id="experiencia-sim" value="possui esperiência">sim
+            <input type="radio" name="experiencia" id="experiencia-nao" value="não possui experiência">não
+        </p>
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button> <!--reseta o campo-->
+        </p>
+        
+
+        
+    </form>
+</body>
+</html>
