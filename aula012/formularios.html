@@ -32,13 +32,15 @@
     <p>O label é o rótulo do formulário. É um elemento em linha, porém ele pode ser transformado em bloco pra quebrar a linha. Além disso, ao clicar nele, ele já seleciona o input que estiver dentro dele ou que estiver baseado no id do input. Por isso o atributo for, dentro do label. Quando o input for radio, o name tem que ser o mesmo para todos os objetos que poderão ser selecionados. No caso abaixo, o name é experiencia.  </p>
     <h2>Os tipos de botão</h2>
     <p>Existem três tipos de botão: botão normal, e os dois dentro do form o reset e o submit. Reset serve para resetar o input e voltar o value dele ao valor padrão. Já o submit, envia o formulário.</p>
+    <h2>Inputs para Datas:</h2>
+    <p></p>
     <p></p>
     <hr><hr><hr>
         <form action="#" method="get" target="_blank" autocomplete="off"> <!--Form também é um bloco. O action é referente a para onde o desenvolvedor irá mandar o formulário. O metodo é atrelado à URL do site. O target envia o formulário para outra página. Autocomplete off para evitar que ele fique dizendo coisas que já foram inseridas anteriormente no formulário.-->
         <p>O meu formulário</p>
         <p>
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" value="Junot Augusto">
         </p>
         <p>
             <label for="dev">Sou um DEV:</label>
@@ -50,9 +52,27 @@
             <input type="radio" name="experiencia" id="experiencia-nao" value="não possui experiência">não
         </p>
         <p>
+            <label for="data">Data de Nascimento:</label>
+            <input type="datetime-local" name="data" id="data" value="1982-11-06T20:00">
+        </p>
+        <p>
+            <label for="cor">Cor Preferida:</label>
+            <input type="color" name="cor" id="cor" value="#06572C">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Ex: email@email.com">
+        </p>
+        <p>
+            <label for="file">Sua Foto:</label>
+            <input type="file" name="file" id="file" accept="image/*"> <!--Aceita qualquer arquivo que tenha a miniatura em imagem, em todos os formatos.-->        
+        </p>
+        
+        <p>
             <button type="submit">Enviar</button>
             <button type="reset">Reset</button> <!--reseta o campo-->
         </p>
+       
         
 
         
