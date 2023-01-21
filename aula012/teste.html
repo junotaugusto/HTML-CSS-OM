@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <title>Formulário de Contato</title>
+    <style>
+        form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#form-data {
+  padding: 20px;
+  background-color: #f2f2f2;
+  font-size: 1.2em;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+    </style>
+  <body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <input type="submit" value="Submit" onclick="submitForm()">
+      </form>
+      
+      <div id="form-data"></div>
+      <form id="myForm">
+        <label for="code">Code:</label>
+        <input type="text" id="code" name="code" required>
+        
+        <label for="description">Product Description:</label>
+        <input type="text" id="description" name="description" required>
+        
+        <label for="color">Color/Stamp:</label>
+        <input type="text" id="color" name="color" required>
+        
+        <label for="salesPrice">Sales Price:</label>
+        <input type="number" id="salesPrice" name="salesPrice" required oninput="calculateCommission()">
+        
+        <label for="commission">Commission (30% of Sales Price):</label>
+        <input type="number" id="commission" name="commission" readonly>
+        
+        <input type="submit" value="Submit" onclick="submitForm()">
+      </form>
+      
+      <div id="form-data">
+        <table>
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Product Description</th>
+              <th>Color/Stamp</th>
+              <th>Sales Price</th>
+              <th>Commission</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </body>
+      <script>
+        function submitForm() {
+          // prevent the form from submitting
+          event.preventDefault();
+          // Get the form data
+          let name = document.getElementById("name").value;
+          let address = document.getElementById("address").value;
+          let email = document.getElementById("email").value;
+          let phone = document.getElementById("phone").value;
+          // Use the form data to update the page
+          document.getElementById("form-data").innerHTML = "Name: " + name + "<br>" + "Address: " + address + "<br>" + "Email: " + email + "<br>" + "Phone: " + phone;
+        }
+        function calculateCommission(){
+        let salesPrice = document.getElementById("salesPrice").value;
+        let commission = (salesPrice * 30) / 100;
+        document.getElementById("commission").value = commission;
+     }
+     function submitForm() {
+    event.preventDefault();
+    let code = document.getElementById("code").value;
+    let description = document.getElementById("description").value;
+    let color = document.getElementById("color").value;
+    let salesPrice = document.getElementById("salesPrice").value;
+    let commission = document.getElementById("commission").value;
+    let tableBody = document.getElementById("table-body");
+    let newRow = tableBody.insertRow();
+    let cell1 = newRow.insertCell(0);
+    let cell2 = newRow.insertCell(1);
+    let cell3 = newRow.insertCell(2);
+    let cell4 = newRow.insertCell(3);
+    let cell5 = newRow.insertCell(4);
+    cell1.innerHTML = code;
+    cell2.innerHTML = description;
+    cell3.innerHTML = color;
+    cell4.innerHTML = salesPrice;
+    cell5.innerHTML = commission;
+  }
+      </script>
+</html>

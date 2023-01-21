@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Get the query parameters from the URL
+    let params = new URLSearchParams(window.location.search);
+  
+    // Get the form data from the query parameters
+    let name = params.get("name");
+    let address = params.get("address");
+    let email = params.get("email");
+    let phone = params.get("phone");
+  
+    // Use the form data to update the page
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("address").innerHTML = address;
+    document.getElementById("email").innerHTML = email;
+    document.getElementById("phone").innerHTML = phone;
+  </script>
+</html>

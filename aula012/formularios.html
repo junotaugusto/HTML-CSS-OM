@@ -63,19 +63,56 @@
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="Ex: email@email.com">
         </p>
+        <p> 
+            <label for="senha">Digite sua senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha"> 
+        </p>
+        <p> <!--Este input é o de alcance. Seria uma barra que marca entre um minimo e um máximo estabelecido. Se inserir o value padrão, ele irá marcar no valor inserido em value.-->
+            <label for="range">Alcance:</label>
+            <input type="range" name="range" id="range" value="50" min="0" max="100" list="trickmarks"> 
+
+            <datalist id="trickmarks">
+                <option value="0" label="0%"></option>
+                <option value="10"></option>
+                <option value="20" ></option>
+                <option value="30" ></option>
+                <option value="40" ></option>
+                <option value="50" label="50%"></option>
+                <option value="60" ></option>
+                <option value="70" ></option>
+                <option value="80" ></option>
+                <option value="90" ></option>
+                <option value="100" label="100%"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="select">Escolha um valor: </label>
+            <select name="select" id="select">
+                <option value="primeiro-valor">Valor1</option><!--Valor entre options é o que o usuário vê, mas o value para aquela opção fica no value.-->
+                <option value="segundo-valor" disabled>Valor2</option><!--Disabled desabilita a opção-->
+                <option value="terceiro-valor">Valor3</option>
+                <option value="quarto-valor" selected>Valor4</option><!--Selected deixa a opção previamente selecionada.-->
+                <option value="quinto-valor">Valor5</option>
+            </select>
+        </p>
         <p>
             <label for="file">Sua Foto:</label>
             <input type="file" name="file" id="file" accept="image/*"> <!--Aceita qualquer arquivo que tenha a miniatura em imagem, em todos os formatos.-->        
         </p>
+        <p> <!--Input de número. No caso, inseri o valor mínimo de 0 e o máximo de 100. Caberia um placeholder, mas como o máximo são três digitos, não coube. Se não tivesse um máximo, caberia uma mensagem.-->
+            <label for="numero">Digite um número de 0 a 100:</label>
+            <input type="number" name="numero" id="numero" placeholder="" min="0" max="100"> 
+        </p>
+        <p>
+            <label for="textarea">Comentários: </label>
+            <textarea name="texto" id="texto" cols="50" rows="5"></textarea>
+        </p>
         
         <p>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="botao">Enviar</button>
             <button type="reset">Reset</button> <!--reseta o campo-->
         </p>
        
-        
-
-        
     </form>
 </body>
 </html>
